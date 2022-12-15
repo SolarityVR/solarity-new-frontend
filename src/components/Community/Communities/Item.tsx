@@ -8,6 +8,7 @@ export interface ItemProps {
     id?: number;
     avatarUrl: string;
     backUrl: string;
+    posterUrl: string;
     communityName: string;
     collectionName?: string;
     memberNumber: number;
@@ -19,6 +20,7 @@ export interface ItemProps {
     websiteUrl?: string;
     twitterUrl?: string;
     discordUrl?: string;
+    iframeUrl?: string;
     walletIcon?: any;
 }
 
@@ -30,6 +32,7 @@ function Item(props: ItemProps) {
         dispatch(setSelectedGame({
             title: props.communityName,
             websiteUrl: props.websiteUrl,
+            iframeUrl: props.iframeUrl,
         }));
         router.push('/community/feed/' + props.id + '?type=' + props.type);
     }
@@ -49,6 +52,7 @@ function Item(props: ItemProps) {
                     <Image src={props.avatarUrl} className="rounded-[20px]" width={100} height={100} layout="responsive" />
                 </div>
             </div>
+            <iframe src={props.iframeUrl} frameBorder="0" className="w-full h-full"></iframe>
         </div>
     )
 }

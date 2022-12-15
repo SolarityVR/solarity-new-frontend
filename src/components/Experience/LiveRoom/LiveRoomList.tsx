@@ -60,7 +60,7 @@ const LiveRoomList = (props: any) => {
               imgUrl={room.imageUrl}
               walletIcon={<SolanaIcon />}
               collectionName={room.title}
-              roomName={room.roomName}
+              ={room.}
               lgImgUrl={room.imageUrl}
               currentNumberOfMembers={room.speakers.length}
               roomId={index}

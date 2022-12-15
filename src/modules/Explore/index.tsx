@@ -3,6 +3,8 @@ import LiveRoomItems from "components/Marketplace/NFTItems/LiveRoomItems";
 import GameItems from "components/Marketplace/NFTItems/GameItems";
 import { LIVE_ROOMS_EXPLORE } from "data/Explore";
 import { games } from 'data/Community';
+import { games2 } from 'data/Community';
+import { games3 } from 'data/Community';
 import React, { useEffect } from "react"
 import { RootStateOrAny, useSelector } from "react-redux";
 import ACTIONS from "config/actions";
@@ -34,13 +36,18 @@ const Explore = () => {
 
     return (
         <div className='grid grid-cols-1 pb-10'>
-            <Header name={'Explore Live rooms right now'} count={rooms.length} onRightArrowClick={roomRightArrowClick} onLeftArrowClick={roomLeftArrowClick} />
-            <div className=' col-span-1'>
-                <LiveRoomItems items={rooms} />
-            </div>
-            <Header name={'Jump Back In'} count={games.length} onRightArrowClick={gameRightArrowClick} onLeftArrowClick={gameLeftArrowClick} />
+
+            <Header name={'Hot Right Now'} count={games.length} onRightArrowClick={gameRightArrowClick} onLeftArrowClick={gameLeftArrowClick} />
             <div className=' col-span-1'>
                 <GameItems items={games} />
+            </div>
+            <Header name={'Highest Yields'} count={games2.length} onRightArrowClick={gameRightArrowClick} onLeftArrowClick={gameLeftArrowClick} />
+            <div className=' col-span-1'>
+                <GameItems items={games2} />
+            </div>
+            <Header name={'What Your Friends Are Playing'} count={games.length} onRightArrowClick={gameRightArrowClick} onLeftArrowClick={gameLeftArrowClick} />
+            <div className=' col-span-1'>
+                <GameItems items={games3} />
             </div>
         </div>
     )

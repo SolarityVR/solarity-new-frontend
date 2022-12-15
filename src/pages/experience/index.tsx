@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { RootStateOrAny, useDispatch, useSelector } from "react-redux"
-
+import { LiveRoomList } from ''
 import Experience from "modules/Experience"
 import ExperienceBanner from "modules/Experience/ExperienceBanner"
 import Layout from "components/Layout"
-import LiveRoomList from "components/Experience/LiveRoom/LiveRoomList"
 import CreateRoomModal from "components/Experience/Common/CreateRoomModal"
 import JoinRoomModal from "components/Experience/Common/JoinRoomModal"
 import MobileExperienceBanner from "components/Experience/LiveRoom/MobileExperienceBanner"

@@ -93,7 +93,6 @@ const GameModal = (props: GameModalType) => {
             <div className="absolute top-[10px] right-[12px] cursor-pointer text-white z-[10001]" onClick={closeDlg}>
               <CloseIcon />
             </div>
-            <iframe src={"https://theportal.to/demo"} frameBorder="0" className="w-full h-full"></iframe>
           </div>
         </Rnd>
       )}

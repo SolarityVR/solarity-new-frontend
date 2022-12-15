@@ -7,7 +7,8 @@ import { setJoinModalVisibility } from "redux/slices/chatSlice";
 export interface NFTItemProps {
   roomName: string;
   imageUrl: string;
-  speakers: any[];
+  posterUrl: string;
+  speakers: number;
   DaoTitle: string;
   DaoAvatar: string;
   collectionName: string;
@@ -23,7 +24,6 @@ const LiveRoomItem = (props: NFTItemProps) => {
         <img src={props.imageUrl} width="100%" height={136} alt="room_image" />
         <div className="absolute flex items-center justify-center bottom-[8px] right-[20px] m-auto w-auto gap-[8px] text-white">
           <Users />
-          {props.speakers.length}
         </div>
       </div>
       <div className='flex md:flex-row xs:flex-col-reverse justify-between gap-[6px] mt-[20px]'>
